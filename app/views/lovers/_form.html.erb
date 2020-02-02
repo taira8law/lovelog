@@ -1,0 +1,14 @@
+<%= form_with(model: lover, local: true) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, '名前' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status, 'ステータス' %>
+    <%= f.text_field :status, class: 'form-control' %>
+  </div>
+  
+  <%= f.submit '保存', class: 'btn btn-primary' %>
+<% end %>

@@ -1,5 +1,9 @@
 <% if logged_in? %>
   <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  <p>交際中の恋人: <%= link_to @lover.name, @lover %></p>
+  <%= link_to '恋人一覧', lovers_path %>
+  <%= link_to '恋人登録', new_lover_path %>
+  <%= link_to '活動登録', new_activity_path %>
   <%= link_to 'Logout', logout_path, method: :delete %>
 <% else %>
   <div class="center jumbotron">
