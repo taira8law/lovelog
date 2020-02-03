@@ -6,7 +6,7 @@ class LoversController < ApplicationController
   def show
     @lover = Lover.find(params[:id])
     @activity = current_user.activities.build
-    @activities = @lover.activities.order(id: :desc).page(params[:page])
+    @activities = @lover.activities.order(activity_date: :desc).page(params[:page])
   end
 
   def new

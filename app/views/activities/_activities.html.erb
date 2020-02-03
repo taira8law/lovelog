@@ -6,9 +6,11 @@
           <%= link_to activity.lover.name, lover_path(activity.lover) %>
         </div>
         <div>
-          <p>活動日: <%= activity.activity_date %></p>
+          <p><%= link_to '活動日', activity %> : <%= link_to activity.activity_date, activity %></p>
           <p>活動内容: <%= activity.content %></p>
         </div>
+        <%= link_to '編集', edit_activity_path(activity) %>
+        <%= link_to '削除', activity, method: :delete , data: {confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
       </div>
     </li>
   <% end %>
