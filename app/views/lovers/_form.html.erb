@@ -7,7 +7,7 @@
 
   <div class="form-group">
     <%= f.label :status, 'ステータス' %>
-    <%= f.text_field :status, class: 'form-control' %>
+    <%= f.select :status, {交際中: '交際中', 元カノ: '元カノ', 浮気中: '浮気中', 友達: '友達' }, class: 'form_control' %>
   </div>
   
   <%= f.submit '保存', class: 'btn btn-primary' %>
